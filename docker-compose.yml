@@ -1,0 +1,17 @@
+version: '3.2'
+services:
+  paddle-ocr:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    container_name: paddle-ocr-container
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ./volume:/volume
+    command: /bin/bash -c 'sleep infinity'
+    ports:
+      - 5100:5100
+      
+

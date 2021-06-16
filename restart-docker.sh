@@ -1,0 +1,1 @@
+git pull && docker restart paddle-ocr-container && tail -F reboot.log
